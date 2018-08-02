@@ -31,10 +31,8 @@ CREATE TABLE country
   capital                bigint,
   tldn                   varchar(2)          NOT NULL,
   CONSTRAINT country_city_id_fk FOREIGN KEY (capital) REFERENCES city (id),
-  CONSTRAINT check_min_length check (length(region) > 1)
+  CONSTRAINT check_min_length check (length(continent) > 1)
 );
-CREATE UNIQUE INDEX country_code_uindex
-  ON public.country (code);
 
 CREATE TABLE countrylanguage
 (

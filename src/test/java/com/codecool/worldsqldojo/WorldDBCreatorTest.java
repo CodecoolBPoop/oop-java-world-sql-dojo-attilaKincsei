@@ -551,4 +551,18 @@ class WorldDBCreatorTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void www_testIsFirstColumnOfCountry() {
+        String expected = "23505";
+
+        Throwable exception = assertThrows(SQLException.class, () -> {
+            worldDBCreator.executeUpdate("INSERT INTO table_name" +
+                    " VALUES('AFG')");
+
+        });
+
+        assertEquals(expected, ((SQLException)exception).getSQLState());
+    }
+
 }
