@@ -389,7 +389,7 @@ class WorldDBCreatorTest {
 
     @Test
     public void testIsFourthColumnOfCountryTableCheckConstraint() {
-        String expected = "23514";
+        String expected = "23514"; // The error with code 23514 is thrown when evaluation of a check constraint resulted in a error.
 
         Throwable exception = assertThrows(SQLException.class, () -> {
             worldDBCreator.executeUpdate("INSERT INTO country" +

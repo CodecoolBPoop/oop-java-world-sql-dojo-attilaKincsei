@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="world-sql-dojo" />
         <module name="worldsqldojo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="world-sql-dojo" target="1.8" />
       <module name="worldsqldojo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
